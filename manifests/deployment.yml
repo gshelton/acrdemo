@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: gsheltonacrdemo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gsheltonacrdemo 
+    spec:
+      containers:
+        - name: gsheltonacrdemo 
+          image: demodevopscr.azurecr.io/gsheltonacrdemo
+          ports:
+          - containerPort: 80
